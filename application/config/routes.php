@@ -54,7 +54,17 @@ $route['home']      = "User_controller/index";
 $route['about']     = "User_controller/about";
 $route['contact']   = "User_controller/contact";
 $route['gallery']   = "User_controller/gallery";
+$route['service']   = "User_controller/service";
 
+
+$route['a_adminka']   = "Admin_controller/index";
+$route['a_login_act'] = "Admin_controller/login_action";
+$route['a_dashboard'] = "Admin_controller/dashboard";
+
+// Product_side start
+$route['a_product_list'] = "Admin_controller/product_list";
+$route['a_product_create'] = "Admin_controller/product_create";
+// Product_side end
 
 
 $route['404_override'] = '';

@@ -1,5 +1,6 @@
 <?php 
-
+// https://www.pleth.com/posts/200-301-404-other-numbers-http-error-codes
+// https://www.youtube.com/watch?v=RBB2N341tr0&t=18s&ab_channel=1BestCsharpblog
 // https://codeigniter.com/userguide3/general/urls.html
 class User_controller extends CI_Controller{
 
@@ -20,6 +21,9 @@ class User_controller extends CI_Controller{
     }
 
 
+    public function service(){
+        $this->load->view('user/service');
+    }
 
 
 
