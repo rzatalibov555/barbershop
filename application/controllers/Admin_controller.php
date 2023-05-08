@@ -15,13 +15,14 @@ class Admin_controller extends CI_Controller{
         $this->load->view("admin/index");
     }
 
-    public function product_list(){
-        $this->load->view("admin/product/list");
+    public function staff_list(){
+        $this->load->view("admin/staff/list");
     }
     
-    public function product_create(){
-        $this->load->view("admin/product/create");
+    public function staff_create(){
+        $this->load->view("admin/staff/create");
     }
 
+    
 
 }

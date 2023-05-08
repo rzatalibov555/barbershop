@@ -62,8 +62,8 @@ $route['a_login_act'] = "Admin_controller/login_action";
 $route['a_dashboard'] = "Admin_controller/dashboard";
 
 // Product_side start
-$route['a_product_list'] = "Admin_controller/product_list";
-$route['a_product_create'] = "Admin_controller/product_create";
+$route['a_staff_list'] = "Admin_controller/staff_list";
+$route['a_staff_create'] = "Admin_controller/staff_create";
 // Product_side end
 
 
