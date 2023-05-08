@@ -40,8 +40,8 @@
              </a>
              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                  <div class="bg-white py-2 collapse-inner rounded">
-                     <a class="collapse-item" href="<?php echo base_url('a_product_list'); ?>">List</a>
-                     <a class="collapse-item" href="<?php echo base_url('a_product_create'); ?>">Create</a>
+                     <a class="collapse-item" href="<?php echo base_url('a_staff_list'); ?>">List</a>
+                     <a class="collapse-item" href="<?php echo base_url('a_staff_create'); ?>">Create</a>
                  </div>
              </div>
          </li>

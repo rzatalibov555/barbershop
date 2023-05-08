@@ -64,6 +64,7 @@ $route['a_dashboard'] = "Admin_controller/dashboard";
 // Product_side start
 $route['a_staff_list'] = "Admin_controller/staff_list";
 $route['a_staff_create'] = "Admin_controller/staff_create";
+$route['a_staff_create_act'] = "Admin_controller/staff_create_act";
 // Product_side end
 
 
