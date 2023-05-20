@@ -15,12 +15,6 @@
 
 
 
-
-
-
-
-
-
         <form action="<?php echo base_url('a_staff_create_act'); ?>" method="post" enctype="multipart/form-data">
 
             <!-- Nav pills -->
@@ -112,7 +106,7 @@
                         </select>
                     </div>
                     <div class="col-sm-4 mb-3 mb-sm-0">
-                        <label for="mob"><b>Mob</b></label>
+                        <label for="mob"><b>Mobil</b></label>
                         <input type="text" name="mobile" class="form-control" id="mob" placeholder="+994-- --- -- --">
                     </div>
                     <div class="col-sm-4 mb-3 mb-sm-0">
