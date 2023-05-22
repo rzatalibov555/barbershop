@@ -54,6 +54,11 @@
                                 </td> 
                                 <td>
                                     <a href="#" style="text-decoration: none;">
+                                        <button type="button" title="View" class="btn btn-success">
+                                            <i class="fas fa-fw fa-eye"></i>
+                                        </button>
+                                    </a>
+                                    <a href="#" style="text-decoration: none;">
                                         <button type="button" title="Update" class="btn btn-warning">
                                             <i class="fas fa-fw fa-pen"></i>
                                         </button>
