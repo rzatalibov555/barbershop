@@ -158,6 +158,11 @@ class Admin_controller extends CI_Controller{
        
     }
 
+    public function detail_staff($id){
+        $data["single_data"] = $this->Admin_model->get_single_staff($id);
+        $this->load->view("admin/staff/detail",$data);
+    }
+
     
 
 }

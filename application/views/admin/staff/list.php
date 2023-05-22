@@ -10,7 +10,7 @@
 
 <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example <a href="<?php echo base_url('a_staff_create'); ?>"><button style="float:right;" type="button" class="btn btn-success">Create</button></a></h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -53,7 +53,7 @@
                                     
                                 </td> 
                                 <td>
-                                    <a href="#" style="text-decoration: none;">
+                                    <a href="<?php echo base_url('a_detail_staff/'.$get_all_data_key['s_id']); ?>" style="text-decoration: none;">
                                         <button type="button" title="View" class="btn btn-success">
                                             <i class="fas fa-fw fa-eye"></i>
                                         </button>
