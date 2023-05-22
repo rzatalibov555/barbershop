@@ -67,6 +67,16 @@ $route['a_staff_create'] = "Admin_controller/staff_create";
 $route['a_staff_create_act'] = "Admin_controller/staff_create_act";
 // Product_side end
 
+// update
+// delete
+// read
+
+// login
+// logout
+// session
+
+// ekrana cixartmaq user
+// single page
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

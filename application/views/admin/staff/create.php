@@ -176,6 +176,13 @@
                         <label for="ProfilePhoto"><b>Profile Photo</b></label>
                         <input type="file" name="file" class="form-control" id="ProfilePhoto">
                     </div>
+
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <label for="experience"><b>Experience</b></label>
+                        <input type="text" name="experience" class="form-control" id="experience" placeholder="enter experience">
+                    </div>
+
+
                 </div>
             </div>
             <br>

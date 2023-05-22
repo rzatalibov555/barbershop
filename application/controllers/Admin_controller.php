@@ -16,7 +16,8 @@ class Admin_controller extends CI_Controller{
     }
 
     public function staff_list(){
-        $this->load->view("admin/staff/list");
+        $data['get_all_data'] = $this->db->order_by('s_id',"DESC")->get('staff')->result_array();
+        $this->load->view("admin/staff/list",$data);
     }
     
     public function staff_create(){
@@ -45,12 +46,13 @@ class Admin_controller extends CI_Controller{
         $facebook       = $_POST['Facebook'];
         $telegram       = $_POST['Telegram'];
         $youtube        = $_POST['Youtube'];
+
+        $experience_az   = $_POST['experience'];
+    
+        
         
         
         if(!empty($firstName_az) && !empty($lastName_az) && !empty($description_az) && !empty($status) && !empty($position)){
-            
-
-
 
             $config['upload_path']          = './uploads/staff/';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
@@ -94,8 +96,11 @@ class Admin_controller extends CI_Controller{
                     's_img_ext'         => $file_ext,
                     's_create_date'     => date("Y-m-d H:i:s"),
                     's_creater_id'      => "",
-                ];
 
+                    's_experience'   => $experience_az,
+                        
+                ];
+             
             
             }else{
 
@@ -122,9 +127,13 @@ class Admin_controller extends CI_Controller{
                     's_youtube'         => $youtube,
                     's_create_date'     => date("Y-m-d H:i:s"),
                     's_creater_id'      => "",
+
+                    's_experience'   => $experience_az,
+                    
                 ];
 
-
+              
+               
             }
 
       
