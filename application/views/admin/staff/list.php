@@ -58,12 +58,12 @@
                                             <i class="fas fa-fw fa-eye"></i>
                                         </button>
                                     </a>
-                                    <a href="#" style="text-decoration: none;">
+                                    <a href="<?php echo base_url('a_edit_staff/'.$get_all_data_key['s_id']); ?>" style="text-decoration: none;">
                                         <button type="button" title="Update" class="btn btn-warning">
                                             <i class="fas fa-fw fa-pen"></i>
                                         </button>
                                     </a>
-                                    <a href="#" style="text-decoration: none;">
+                                    <a onclick="return confirm('Are you sure want to delete this item?')" href="<?php echo base_url('a_delete_staff/'.$get_all_data_key['s_id']); ?>" style="text-decoration: none;">
                                         <button type="button" title="Delete" class="btn btn-danger">
                                             <i class="fas fa-fw fa-trash"></i>
                                         </button>
