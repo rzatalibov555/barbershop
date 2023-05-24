@@ -19,6 +19,10 @@ class Admin_model extends CI_Model{
         redirect(base_url('a_staff_list'));
     }
 
+    public function update_staff($id, $data){
+        $this->db->where('s_id', $id)->update('staff', $data);
+    }
+
    
 
 }

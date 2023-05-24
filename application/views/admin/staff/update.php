@@ -13,7 +13,7 @@
         <h3 class="text-center text-white bg-warning py-2 rounded">Contact Information</h3>
         <br>
 
-        <form action="<?php echo base_url('#'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url('a_edit_staff_act/'.$single_data['s_id']); ?>" method="post" enctype="multipart/form-data">
 
             <!-- Nav pills -->
             <ul class="nav nav-pills">
@@ -189,7 +189,7 @@
                     </div>
                     
                     <a target="_blank" href="<?php echo base_url('uploads/staff/'.$single_data['s_img']); ?>">
-                    <img style="margin-left: 14px;" width="150" src="<?php echo base_url('uploads/staff/'.$single_data['s_img']); ?>" alt="">
+                    <img style="margin-left: 14px; object-fit:cover;" width="150" height="150" src="<?php echo base_url('uploads/staff/'.$single_data['s_img']); ?>" alt="">
                     </a>
 
                 </div>

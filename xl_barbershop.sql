@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2023 at 07:05 PM
+-- Generation Time: May 24, 2023 at 06:10 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -70,6 +70,7 @@ CREATE TABLE `staff` (
   `s_mobile` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `s_whatsApp` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `s_facebook` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `s_instagram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `s_telegram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `s_youtube` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `s_img` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -82,18 +83,16 @@ CREATE TABLE `staff` (
 -- Dumping data for table `staff`
 --
 
-INSERT INTO `staff` (`s_id`, `s_name_az`, `s_name_en`, `s_name_ru`, `s_surname_az`, `s_surname_en`, `s_surname_ru`, `s_description_az`, `s_description_en`, `s_description_ru`, `s_position`, `s_status`, `s_email`, `s_experience`, `s_mobile`, `s_whatsApp`, `s_facebook`, `s_telegram`, `s_youtube`, `s_img`, `s_img_ext`, `s_create_date`, `s_creater_id`) VALUES
-(1, 'Nadir az', 'Nadir en', 'Nadir ru', 'Quliyev az', 'Quliyev en', 'Quliyev ru', 'az desc das dsad asd asd asdas das d', 'en desc das dsad asd asd asdas das d', 'ru desc das dsad asd asd asdas das d', 'Director', 'Active', 'test@gmail.com', '', '+994552223344', '+994552223355', 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.facebook.com/', '', '', '2023-05-10 18:28:18', 0),
-(2, 'asadsad', 'sadasd', 'sdasd', 'adadsadasd', 'asd', 'asdasd', 'asdasdsad', 'asdasdsad', 'asdasdsad', 'Master', 'Active', 'sdsadsd', '', '232323', '232323', 'dsadasd', 'asdsadasd', 'dasdasd', '', '', '2023-05-10 18:29:46', 0),
-(4, 'dfgdfg', '', '', 'gdfgfdgfdg', '', '', 'fdgfdgfd', '', '', 'Director', 'Active', 'fgdfg@dfsdfdsf', '', 'fgfdg', 'dfgdfg', 'fdgdfg', 'dfgfdg', 'fdgfg', '', '', '2023-05-13 15:59:49', 0),
-(5, 'Nadir', '', '', 'Quliyev', '', '', 'Sahib', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(6, 'Rza', '', '', 'Talibov', '', '', 'Ilqar', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(8, 'sdasd', '', '', 'sadsadasd', '', '', 'asdasdasd', '', '', 'Director', 'Active', 'test@gmail.com', '', '+994552223344', '+994552223355', 'sdasd', 'asdasd', 'asdasd', '', '', '2023-05-13 16:11:53', 0),
-(10, 'asdasdsa', '', '', 'dasdsadasd', '', '', 'sdsadsdasdasdsad', '', '', 'Director', 'Active', 'test@gmail.com', '', '+994552223344', '+994552223355', 'fgdgh', 'gfhgfhgfh', 'hgfhgf', 'saat.jpg', '.jpg', '2023-05-13 16:35:46', 0),
-(12, 'sdasdas', '', '', 'ddasdasa', '', '', 'sdasdsadasdsad', '', '', 'Director', 'Active', '', '', '', '', '', '', '', '6fca0fae36eb33c8ce8e15a1b60b9dbe.jpg', '.jpg', '2023-05-13 16:39:11', 0),
-(13, 'dfsd', '', '', 'fsdfd', '', '', 'sfsdf', '', '', 'Manager', 'Active', '', '', '', '', '', '', '', 'a_1.jpg', '.jpg', '2023-05-13 16:40:31', 0),
-(15, 'sdasdsaad', '', '', 'dasdasda', '', '', 'sdsadsad', '', '', 'Director', 'Active', '', '', '', '', '', '', '', 'a_12.jpg', '.jpg', '2023-05-13 16:41:36', 0),
-(19, 'Rza', '', '', 'Talibov', '', '', 'lorem ipsum dolar sit amet ', '', '', 'Director', 'Active', 'test@gmail.com', '5', '+994552223344', '+994552223355', 'https://www.facebook.com/', 'https://www.telegram.com/', 'https://www.youtube.com/', 'c1714c222a08ac0964985116865ccb60.png', '.png', '2023-05-22 16:58:15', 0);
+INSERT INTO `staff` (`s_id`, `s_name_az`, `s_name_en`, `s_name_ru`, `s_surname_az`, `s_surname_en`, `s_surname_ru`, `s_description_az`, `s_description_en`, `s_description_ru`, `s_position`, `s_status`, `s_email`, `s_experience`, `s_mobile`, `s_whatsApp`, `s_facebook`, `s_instagram`, `s_telegram`, `s_youtube`, `s_img`, `s_img_ext`, `s_create_date`, `s_creater_id`) VALUES
+(1, 'Nadir az', 'Nadir en', 'Nadir ru', 'Quliyev az', 'Quliyev en', 'Quliyev ru', 'az desc das dsad asd asd asdas das d', 'en desc das dsad asd asd asdas das d', 'ru desc das dsad asd asd asdas das d', 'Director', 'Active', 'test@gmail.com', '', '+994552223344', '+994552223355', 'https://www.facebook.com/', '', 'https://www.facebook.com/', 'https://www.facebook.com/', '', '', '2023-05-10 18:28:18', 0),
+(2, 'asadsad', 'sadasd', 'sdasd', 'adadsadasd', 'asd', 'asdasd', 'asdasdsad', 'asdasdsad', 'asdasdsad', 'Master', 'Active', 'sdsadsd', '', '232323', '232323', 'dsadasd', '', 'asdsadasd', 'dasdasd', '', '', '2023-05-10 18:29:46', 0),
+(4, 'dfgdfg', '', '', 'gdfgfdgfdg', '', '', 'fdgfdgfd', '', '', 'Director', 'Active', 'fgdfg@dfsdfdsf', '', 'fgfdg', 'dfgdfg', 'fdgdfg', '', 'dfgfdg', 'fdgfg', '', '', '2023-05-13 15:59:49', 0),
+(5, 'Nadir', '', '', 'Quliyev', '', '', 'Sahib', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
+(6, 'Rza', '', '', 'Talibov', '', '', 'Ilqar', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
+(8, 'sdasd', '', '', 'sadsadasd', '', '', 'asdasdasd', '', '', 'Director', 'Active', 'test@gmail.com', '', '+994552223344', '+994552223355', 'sdasd', '', 'asdasd', 'asdasd', '', '', '2023-05-13 16:11:53', 0),
+(10, 'asdasdsa', '', '', 'dasdsadasd', '', '', 'sdsadsdasdasdsad', '', '', 'Director', 'Active', 'test@gmail.com', '', '+994552223344', '+994552223355', 'fgdgh', '', 'gfhgfhgfh', 'hgfhgf', 'saat.jpg', '.jpg', '2023-05-13 16:35:46', 0),
+(12, 'sdasdas', '', '', 'ddasdasa', '', '', 'sdasdsadasdsad', '', '', 'Director', 'Active', '', '', '', '', '', '', '', '', '6fca0fae36eb33c8ce8e15a1b60b9dbe.jpg', '.jpg', '2023-05-13 16:39:11', 0),
+(19, 'Rza', 'sss', 'ddd', 'Talibov', 'fff', 'ggg', 'lorem ipsum dolar sit amet', 'hhh', 'jjj', 'Director', 'Active', 'test@gmail.com', '7', '+994552223344', '+994552223355', 'https://www.facebook.com/', 'dddd', 'https://www.telegram.com/', 'https://www.youtube.com/', '516d0d518ef3b7b74b5a452269dd608a.jpg', '.jpg', '2023-05-24 18:10:14', 0);
 
 --
 -- Indexes for dumped tables
