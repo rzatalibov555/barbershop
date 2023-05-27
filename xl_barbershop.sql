@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2023 at 06:10 PM
+-- Generation Time: May 27, 2023 at 06:10 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -43,8 +43,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`a_id`, `a_name`, `a_surname`, `a_username`, `a_password`, `a_email`, `a_position`, `a_img`) VALUES
-(1, 'Nadir', 'Quliyev', 'nadir', '123', 'nadir@gmail.com', 'Admin', '1.jpg'),
-(2, 'İbrahim', 'Ağamalıyev', 'ibo', '123', 'info@xlbarbarshop.az', 'Redactor', '2.jpg');
+(1, 'Nadir', 'Quliyev', 'nadir', '202cb962ac59075b964b07152d234b70', 'nadir@gmail.com', 'Admin', '1.jpg'),
+(2, 'İbrahim', 'Ağamalıyev', 'ibo', '202cb962ac59075b964b07152d234b70', 'info@xlbarbarshop.az', 'Redactor', '2.jpg');
 
 -- --------------------------------------------------------
 
@@ -118,7 +118,7 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `staff`

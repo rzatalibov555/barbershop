@@ -13,8 +13,50 @@ class Admin_controller extends CI_Controller{
     }
 
     public function login_action(){
-        
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+       if(!empty($username) && !empty($password)){
+            
+            $data = [
+                'a_username' => $username,
+                'a_password' => md5($password),
+            ];
+           
+            $checkUser = $this->db->select('a_id')->where($data)->get('admin')->row_array();
+
+            if($checkUser){
+                $_SESSION['admin_id'] = $checkUser['a_id'];                        //- yaratmaq
+                redirect(base_url('a_dashboard'));
+            }else{
+                $this->session->set_flashdata('err','Username ve ya password yalnsidir!');
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+
+           // $_SESSION['admin_id']                                              //- cagirmaq
+           // unset($_SESSION['admin_id'])                                       //- silmek
+           // isset($_SESSION['admin_id'])                                       //- yoxlamaq var yoxsa yoxdur
+
+
+
+            // $this->session->set_userdata("admin_id", $checkUser['a_id']);   - yaratmaq
+            // $this->session->userdata("admin_id");                           - cagirmaq
+            // $this->session->unset_userdata("admin_id");                     - silmek
+            // $this->session->has_userdata("admin_id");                       - yoxlamaq var yoxsa yoxdur
+       
+       
+        }else{
+            $this->session->set_flashdata('err','Boşluq buraxmayın!');
+            redirect($_SERVER['HTTP_REFERER']);
+       }
     }
+    
+    public function logOut(){
+        unset($_SESSION['admin_id']);
+        $this->session->set_flashdata('success','Sizi bir daha gozleyeceyik!');
+        redirect(base_url("a_adminka"));
+    }
+
 
     public function dashboard(){
         $this->load->view("admin/index");

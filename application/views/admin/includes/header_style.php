@@ -1,3 +1,10 @@
+<?php 
+if(!isset($_SESSION['admin_id'])){
+    $this->session->set_flashdata('err','Sifre yig sonra daxil ol. Artist!');
+    redirect(base_url('a_adminka'));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
