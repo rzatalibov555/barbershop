@@ -23,6 +23,10 @@ class Admin_model extends CI_Model{
         $this->db->where('s_id', $id)->update('staff', $data);
     }
 
+
+    public function check_admin_login($data){
+        return $this->db->select('a_id')->where($data)->get('admin')->row_array();
+    }
    
 
 }

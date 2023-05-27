@@ -23,7 +23,7 @@ class Admin_controller extends CI_Controller{
                 'a_password' => md5($password),
             ];
            
-            $checkUser = $this->db->select('a_id')->where($data)->get('admin')->row_array();
+            $checkUser = $this->Admin_model->check_admin_login($data);
 
             if($checkUser){
                 $_SESSION['admin_id'] = $checkUser['a_id'];                        //- yaratmaq
