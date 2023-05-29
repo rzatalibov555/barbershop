@@ -4,8 +4,17 @@
 // https://codeigniter.com/userguide3/general/urls.html
 class User_controller extends CI_Controller{
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('User_model');
+    }
+
+
     public function index(){
-        $this->load->view('user/index');
+        $data['staff'] = $this->User_model->get_staff();
+        
+        $this->load->view('user/index',$data);
     }
 
     public function about(){
