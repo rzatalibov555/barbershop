@@ -7,7 +7,10 @@ class Admin_model extends CI_Model{
     }
     
     public function get_all_data(){
-        return $this->db->order_by('s_id',"DESC")->get('staff')->result_array();
+        return $this->db->order_by('s_id',"DESC")
+        ->join('position',"position.p_id = staff.s_position", "left")
+        ->get('staff')
+        ->result_array();
     }
 
     public function get_single_staff($id){
@@ -28,5 +31,13 @@ class Admin_model extends CI_Model{
         return $this->db->select('a_id')->where($data)->get('admin')->row_array();
     }
    
+
+    public function get_all_position(){
+        return $this->db->get('position')->result_array();
+    }
+
+    public function chek_position($position){
+        return $this->db->where('p_id', $position)->get('position')->row_array();
+    }
 
 }

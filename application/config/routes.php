@@ -74,6 +74,11 @@ $route['a_edit_staff/(.*)'] = "Admin_controller/edit_staff/$1";
 $route['a_edit_staff_act/(.*)'] = "Admin_controller/edit_staff_act/$1";
 // Product_side end
 
+
+
+
+
+// Insert
 // update
 // delete
 // read
@@ -84,6 +89,8 @@ $route['a_edit_staff_act/(.*)'] = "Admin_controller/edit_staff_act/$1";
 
 // ekrana cixartmaq user
 // single page
+
+// -------------------------------
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

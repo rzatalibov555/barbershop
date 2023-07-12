@@ -33,7 +33,7 @@
                             <tr>
                                 <td><?php echo $say; ?></td>
                                 <td><?php echo $get_all_data_key['s_name_az']; ?> <?php echo $get_all_data_key['s_surname_az']; ?></td>
-                                <td><?php echo $get_all_data_key['s_position']; ?></td>
+                                <td><?php echo $get_all_data_key['p_name_az']; ?></td>
                                 <td><?php echo $get_all_data_key['s_email']; ?></td>
                                 <td>
                                     <?php if($get_all_data_key['s_experience']){ ?>

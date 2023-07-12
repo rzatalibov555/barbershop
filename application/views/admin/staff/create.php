@@ -1,7 +1,3 @@
-
-
-
-
 <?php $this->load->view('admin/includes/header_style'); ?>
 <?php $this->load->view('admin/includes/left_menu'); ?>
 <?php $this->load->view('admin/includes/navbar'); ?>
@@ -12,6 +8,12 @@
         <h6 class="m-0 font-weight-bold text-primary">Staff Create</h6>
     </div>
     <div class="card-body">
+
+        <?php if ($this->session->flashdata("err")) { ?>
+            <div class="alert alert-danger">
+                <?php echo $this->session->flashdata("err"); ?>
+            </div>
+        <?php } ?>
 
         <br>
         <h3 class="text-center text-white bg-primary py-2 rounded">Contact Information</h3>
@@ -54,7 +56,7 @@
                 </div>
 
                 <div class="tab-pane container fade mx-0 px-0" id="menu1">
-                <div class="form-group row mt-3">
+                    <div class="form-group row mt-3">
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <label for="FirstName"><b>First Name EN</b></label>
                             <input type="text" name="FirstName_en" class="form-control" id="FirstName" placeholder="First Name">
@@ -71,7 +73,7 @@
                 </div>
 
                 <div class="tab-pane container fade mx-0 px-0" id="menu2">
-                <div class="form-group row mt-3">
+                    <div class="form-group row mt-3">
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <label for="FirstName"><b>First Name RU</b></label>
                             <input type="text" name="FirstName_ru" class="form-control" id="FirstName" placeholder="First Name">
@@ -102,11 +104,9 @@
                         <label for="Position"><b>Position</b></label>
                         <select name="position" id="Position" class="form-control">
                             <option value="">-SELECT-</option>
-                            <option value="Director">Director</option>
-                            <option value="Manager">Manager</option>
-                            <option value="Master">Master</option>
-                            <option value="Asistent">Asistent</option>
-                            <option value="Other">Other</option>
+                            <?php foreach ($position as $item) { ?>
+                                <option value="<?php echo $item['p_id']; ?>"><?php echo $item['p_name_az']; ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                     <div class="col-sm-4 mb-3 mb-sm-0">
@@ -170,7 +170,7 @@
                             <option value="Deactive">Deactive</option>
                         </select>
                     </div>
-                    
+
                     <div class="col-sm-4 mb-3 mb-sm-0">
                         <label for="Email"><b>Email</b></label>
                         <input type="text" name="Email" class="form-control" id="Email" placeholder="Email">

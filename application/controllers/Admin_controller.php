@@ -15,7 +15,7 @@ class Admin_controller extends CI_Controller{
     public function login_action(){
         $username = $_POST['username'];
         $password = $_POST['password'];
-
+        
        if(!empty($username) && !empty($password)){
             
             $data = [
@@ -23,6 +23,8 @@ class Admin_controller extends CI_Controller{
                 'a_password' => md5($password),
             ];
            
+            $data = $this->security->xss_clean($data);
+
             $checkUser = $this->Admin_model->check_admin_login($data);
 
             if($checkUser){
@@ -65,11 +67,22 @@ class Admin_controller extends CI_Controller{
     public function staff_list(){
 
         $data['get_all_data'] = $this->Admin_model->get_all_data();
+
+
+        // print_r("<pre>");
+        // print_r($data['get_all_data']);
+        // die();
+
         $this->load->view("admin/staff/list",$data);
     }
     
     public function staff_create(){
-        $this->load->view("admin/staff/create");
+        $data['position'] = $this->Admin_model->get_all_position(); 
+        $this->load->view("admin/staff/create",$data);
+      
+        // print_r("<pre>");
+        // print_r($data['position']);
+        // die();
     }
 
     public function staff_create_act(){
@@ -102,6 +115,17 @@ class Admin_controller extends CI_Controller{
         
         
         if(!empty($firstName_az) && !empty($lastName_az) && !empty($description_az) && !empty($status) && !empty($position)){
+
+            $checkPosition = $this->Admin_model->chek_position($position); 
+        
+
+            if(!$checkPosition){
+                $this->session->set_flashdata("err","Position invalid!");
+                redirect($_SERVER['HTTP_REFERER']); 
+            }
+        
+
+            
 
             $config['upload_path']          = './uploads/staff/';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
@@ -184,13 +208,15 @@ class Admin_controller extends CI_Controller{
                 ];
                
             }
-            
+            $data = $this->security->xss_clean($data);
+
             $this->Admin_model->insert_staff($data);
             redirect(base_url('a_staff_list'));
 
             
 
         }else{
+            $this->session->set_flashdata("err","Bosluq buraxmayin!");
             redirect($_SERVER['HTTP_REFERER']);
         }
                 
@@ -205,6 +231,7 @@ class Admin_controller extends CI_Controller{
 
     public function detail_staff($id){
         $data["single_data"] = $this->Admin_model->get_single_staff($id);
+        $data["single_data"] = $this->security->xss_clean($data["single_data"]);
         $this->load->view("admin/staff/detail",$data);
     }
 
@@ -317,11 +344,13 @@ class Admin_controller extends CI_Controller{
                     's_youtube'         => $youtube,
                     's_create_date'     => date("Y-m-d H:i:s"),
                     's_creater_id'      => "",
-                  
                     's_experience'   => $experience_az,
                 ];
 
             }
+            
+            $data = $this->security->xss_clean($data);
+            $id   = $this->security->xss_clean($id);
 
             $this->Admin_model->update_staff($id, $data);
             redirect(base_url('a_staff_list'));
