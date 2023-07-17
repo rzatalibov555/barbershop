@@ -197,7 +197,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p style="color: #D7B56D !important" class="d-inline-block bg-secondary text-primary py-1 px-4">Ustalarımız</p>
+                <p style="color: #D7B56D !important" class="d-inline-block bg-secondary text-primary py-1 px-4"><a style="color:#D7B56D !important" href="<?php echo base_url('staff'); ?>">Ustalarımız</a></p>
                 <h2>Ustalarımızla tanış olun:</h2>
             </div>
             <div class="row g-4">
@@ -240,10 +240,6 @@
                                     <?php if ($item['s_youtube']) { ?>
                                         <a target="_blank" class="btn btn-square" href="<?php echo $item['s_youtube']; ?>"><i style="color: #D7B56D !important" class="fab fa-youtube"></i></a>
                                     <?php } ?>
-
-
-
-
 
                                 </div>
                             </div>
