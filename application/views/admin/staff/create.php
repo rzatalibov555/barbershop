@@ -22,7 +22,7 @@
 
 
         <form action="<?php echo base_url('a_staff_create_act'); ?>" method="post" enctype="multipart/form-data">
-
+        <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash();?>" />
             <!-- Nav pills -->
             <ul class="nav nav-pills">
                 <li class="nav-item">

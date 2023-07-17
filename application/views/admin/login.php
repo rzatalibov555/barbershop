@@ -42,6 +42,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Admin</h1>
                                     </div>
                                     <form class="user" action="<?php echo base_url('a_login_act'); ?>" method="post">
+                                    <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash();?>" />
                                         <div class="form-group">
                                             <label for="a">Username</label>
                                             <input autocomplete="off" type="text" name="username" class="form-control form-control-user"

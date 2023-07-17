@@ -207,7 +207,12 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item">
                             <div class="team-img position-relative overflow-hidden">
-                                <img class="img-fluid" style="width:100%!important; height: 425px!important; object-fit:cover!important;" src="<?php echo base_url('uploads/staff/' . $item['s_img']); ?>" alt="">
+                                <?php if($item['s_img']){ ?>
+                                    <img class="img-fluid" style="width:100%!important; height: 425px!important; object-fit:cover!important;" src="<?php echo base_url('uploads/staff/' . $item['s_img']); ?>" alt="">
+                                <?php }else{ ?>
+                                    <img class="img-fluid" style="width:100%!important; height: 425px!important; object-fit:contain!important;" src="<?php echo base_url('public/assets/img/image-07-08-22-10-34.png'); ?>" alt="">
+                                <?php } ?>
+                                
                                 <div class="team-social">
                                     <?php if ($item['s_email']) { ?>
                                         <a target="_blank" class="btn btn-square" href="mailto:<?php echo $item['s_email']; ?>"><i style="color: #D7B56D !important" class="fas fa-envelope"></i></a>

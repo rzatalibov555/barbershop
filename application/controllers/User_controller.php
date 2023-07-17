@@ -35,6 +35,16 @@ class User_controller extends CI_Controller{
     }
 
 
+    public function staff(){
+        $data['staff'] = $this->User_model->u_get_all_staff();
+
+        // print_r('<pre>');
+        // print_r($data['staff']);
+        // die();
+
+        $this->load->view('user/staff', $data);
+    }
+
 
 
 
