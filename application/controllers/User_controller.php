@@ -4,6 +4,7 @@
 // https://codeigniter.com/userguide3/general/urls.html
 // https://codeigniter.com/userguide3/libraries/pagination.html
 // https://www.codexworld.com/multi-language-implementation-in-codeigniter/
+// https://datatables.net/extensions/buttons/examples/initialisation/export
 
 // multilanguage +
 // datatable +
