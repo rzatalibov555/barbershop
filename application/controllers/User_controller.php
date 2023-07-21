@@ -3,11 +3,11 @@
 // https://www.youtube.com/watch?v=RBB2N341tr0&t=18s&ab_channel=1BestCsharpblog
 // https://codeigniter.com/userguide3/general/urls.html
 // https://codeigniter.com/userguide3/libraries/pagination.html
+// https://www.codexworld.com/multi-language-implementation-in-codeigniter/
 
-
-// multilanguage
-// datatable
-// ckeditor
+// multilanguage +
+// datatable +
+// ckeditor 
 
 // servere yuklemek
 // sendmail
@@ -23,6 +23,7 @@ class User_controller extends CI_Controller{
         parent::__construct();
         $this->load->model('User_model');
         $this->load->library('pagination');
+        $this->lang->load('message','en');
     }
 
 

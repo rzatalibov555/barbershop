@@ -4,10 +4,6 @@
 <?php $this->load->view('admin/includes/statistics'); ?>
 
 
-
-
-
-
 <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">DataTables Example <a href="<?php echo base_url('a_staff_create'); ?>"><button style="float:right;" type="button" class="btn btn-success">Create</button></a></h6>
@@ -85,5 +81,6 @@
         </div>
     </div>
 
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
     <?php $this->load->view('admin/includes/footer'); ?>
     <?php $this->load->view('admin/includes/footer_scripts'); ?>
