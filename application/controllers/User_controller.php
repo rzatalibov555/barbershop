@@ -6,9 +6,11 @@
 // https://www.codexworld.com/multi-language-implementation-in-codeigniter/
 // https://datatables.net/extensions/buttons/examples/initialisation/export
 
+// https://www.youtube.com/watch?v=le31cIjv_Sw&ab_channel=ProgrammingwithVishal
+
 // multilanguage +
 // datatable +
-// ckeditor 
+// ckeditor +
 
 // servere yuklemek
 // sendmail
